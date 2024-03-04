@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_axe"
+    },
+    "B": {
+      "item": "minecraft:iron_shovel"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:iron_pickaxe"
+    }
+  },
+  "pattern": [
+    "ABD",
+    " C ",
+    " C "
+  ],
+  "result": {
+    "item": "simplest_paxels:iron_paxel"
+  },
+  "show_notification": true
+}

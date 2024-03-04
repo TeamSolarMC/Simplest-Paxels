@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond_axe"
+    },
+    "B": {
+      "item": "minecraft:diamond_shovel"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:diamond_pickaxe"
+    }
+  },
+  "pattern": [
+    "ABD",
+    " C ",
+    " C "
+  ],
+  "result": {
+    "item": "simplest_paxels:diamond_paxel"
+  },
+  "show_notification": true
+}
