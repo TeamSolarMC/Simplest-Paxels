@@ -1,1 +1,7 @@
-// 1.20.1	2024-03-04T23:32:27.5825161	Item Models: simplest_paxels
+// 1.20.1	2024-03-05T21:56:46.189207	Item Models: simplest_paxels
+47097f31853578da2be0fda54c4561645c4b2e8a assets/simplest_paxels/models/item/diamond_paxel.json
+93fcba3f6a8cb64f76abf1e122164712e57935da assets/simplest_paxels/models/item/gold_paxel.json
+ea3a89ea3614d984b86bab906c162cee60dd3729 assets/simplest_paxels/models/item/iron_paxel.json
+2401193c5275238ee1693a5e6bcfde5a8c3ac2c9 assets/simplest_paxels/models/item/netherite_paxel.json
+f9fdb5675618181ed08f6c588a1353e57c89e3f8 assets/simplest_paxels/models/item/stone_paxel.json
+243f2f0a13ba701ebc490b3f575e3e40bde594c6 assets/simplest_paxels/models/item/wood_paxel.json
