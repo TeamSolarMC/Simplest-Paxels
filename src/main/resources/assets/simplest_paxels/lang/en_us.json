@@ -1,0 +1,11 @@
+{
+  "item.simplest_paxels.wood_paxel": "Wood Paxel",
+  "item.simplest_paxels.stone_paxel": "Stone Paxel",
+  "item.simplest_paxels.iron_paxel": "Iron Paxel",
+  "item.simplest_paxels.gold_paxel": "Gold Paxel",
+  "item.simplest_paxels.diamond_paxel": "Diamond Paxel",
+  "item.simplest_paxels.netherite_paxel": "Netherite Paxel",
+
+
+  "creativetab.simplest_paxels_tab": "Simplest Paxels"
+}

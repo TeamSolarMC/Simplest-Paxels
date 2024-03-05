@@ -20,12 +20,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        handheldItem(ModItems.WOOD_PAXEL);
-//        handheldItem(ModItems.STONE_PAXEL);
-//        handheldItem(ModItems.IRON_PAXEL);
-//        handheldItem(ModItems.GOLD_PAXEL);
-//        handheldItem(ModItems.DIAMOND_PAXEL);
-//        handheldItem(ModItems.NETHERITE_PAXEL);
+        handheldItem(ModItems.WOOD_PAXEL);
+        handheldItem(ModItems.STONE_PAXEL);
+        handheldItem(ModItems.IRON_PAXEL);
+        handheldItem(ModItems.GOLD_PAXEL);
+        handheldItem(ModItems.DIAMOND_PAXEL);
+        handheldItem(ModItems.NETHERITE_PAXEL);
     }
 
     private ItemModelBuilder complexBlock(Block block) {

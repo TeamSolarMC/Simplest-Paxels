@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 @Mod(SimplestPaxels.MOD_ID)
 public class SimplestPaxels
 {
-    public static final String MOD_ID = "simplest_paxels";
+    public static final String MOD_ID = "assets/simplest_paxels";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public SimplestPaxels() {
