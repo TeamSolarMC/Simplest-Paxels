@@ -22,9 +22,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Items.PAXELS)
                 .add(
-                        ModItems.WOOD_PAXEL.get(),
+                        ModItems.WOODEN_PAXEL.get(),
                         ModItems.STONE_PAXEL.get(),
-                        ModItems.GOLD_PAXEL.get(),
+                        ModItems.GOLDEN_PAXEL.get(),
                         ModItems.IRON_PAXEL.get(),
                         ModItems.DIAMOND_PAXEL.get(),
                         ModItems.NETHERITE_PAXEL.get());

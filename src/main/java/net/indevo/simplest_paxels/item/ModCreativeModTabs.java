@@ -17,10 +17,10 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.NETHERITE_PAXEL.get()))
                     .title(Component.translatable("creativetab.simplest_paxel_tab"))
                     .displayItems(((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.WOOD_PAXEL.get());
+                        pOutput.accept(ModItems.WOODEN_PAXEL.get());
                         pOutput.accept(ModItems.STONE_PAXEL.get());
                         pOutput.accept(ModItems.IRON_PAXEL.get());
-                        pOutput.accept(ModItems.GOLD_PAXEL.get());
+                        pOutput.accept(ModItems.GOLDEN_PAXEL.get());
                         pOutput.accept(ModItems.DIAMOND_PAXEL.get());
                         pOutput.accept(ModItems.NETHERITE_PAXEL.get());
                     }))

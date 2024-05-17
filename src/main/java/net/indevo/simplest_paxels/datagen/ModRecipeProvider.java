@@ -40,7 +40,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.STICK).build()))
                 .save(p_251297_);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOOD_PAXEL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOODEN_PAXEL.get())
                 .pattern("ABD")
                 .pattern(" C ")
                 .pattern(" C ")
@@ -76,7 +76,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.STICK).build()))
                 .save(p_251297_);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLD_PAXEL.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLDEN_PAXEL.get())
                 .pattern("ABD")
                 .pattern(" C ")
                 .pattern(" C ")
