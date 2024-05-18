@@ -10,7 +10,7 @@ license="MIT"
 
 modId="simplest_paxels"
 
-version="1.0.2"
+version="1.0.3"
 
 displayName="Simplest Paxels"
 
@@ -18,7 +18,7 @@ authors="IndEvo Studio" #optional
 
 
 
-description='''A light mod adding vanilla paxels breaking in area 3x3.'''
+description='''Vanilla paxels: pickaxe + axe + shovel in one.'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.simplest_paxels]] #optional
 # the modid of the dependency
