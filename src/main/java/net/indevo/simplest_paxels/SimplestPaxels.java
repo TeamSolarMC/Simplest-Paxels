@@ -1,8 +1,8 @@
 package net.indevo.simplest_paxels;
 
 import com.mojang.logging.LogUtils;
-import net.indevo.simplest_paxels.item.ModCreativeModTabs;
 import net.indevo.simplest_paxels.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,8 +24,6 @@ public class SimplestPaxels
     public SimplestPaxels() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeModTabs.register(modEventBus);
-
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -39,7 +37,22 @@ public class SimplestPaxels
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.WOODEN_PAXEL);
+            event.accept(ModItems.STONE_PAXEL);
+            event.accept(ModItems.IRON_PAXEL);
+            event.accept(ModItems.GOLDEN_PAXEL);
+            event.accept(ModItems.DIAMOND_PAXEL);
+            event.accept(ModItems.NETHERITE_PAXEL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.WOODEN_PAXEL);
+            event.accept(ModItems.STONE_PAXEL);
+            event.accept(ModItems.IRON_PAXEL);
+            event.accept(ModItems.GOLDEN_PAXEL);
+            event.accept(ModItems.DIAMOND_PAXEL);
+            event.accept(ModItems.NETHERITE_PAXEL);
+        }
     }
 
     @SubscribeEvent
