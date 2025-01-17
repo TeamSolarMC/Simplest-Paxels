@@ -13,13 +13,13 @@ public class ModItems {
             DeferredRegister.createItems(SimplestPaxels.MODID);
 
     public static final DeferredItem<Item> WOODEN_PAXEL = ITEMS.register("wooden_paxel",
-            () -> new PaxelItem(Tiers.WOOD, 5.0F, -3.3F, new Item.Properties().durability(88)));
+            () -> new PaxelItem(Tiers.WOOD, 6.0F, -3.1F, new Item.Properties().durability(88)));
     public static final DeferredItem<Item> STONE_PAXEL = ITEMS.register("stone_paxel",
-            () -> new PaxelItem(Tiers.STONE, 5.0F, -3.3F, new Item.Properties().durability(196)));
+            () -> new PaxelItem(Tiers.STONE, 7.0F, -3.1F, new Item.Properties().durability(196)));
     public static final DeferredItem<Item> IRON_PAXEL = ITEMS.register("iron_paxel",
-            () -> new PaxelItem(Tiers.IRON, 5.0F, -3.2F, new Item.Properties().durability(375)));
+            () -> new PaxelItem(Tiers.IRON, 6.0F, -3.1F, new Item.Properties().durability(375)));
     public static final DeferredItem<Item> GOLDEN_PAXEL = ITEMS.register("golden_paxel",
-            () -> new PaxelItem(Tiers.GOLD, 5.0F, -3.1F, new Item.Properties().durability(48)));
+            () -> new PaxelItem(Tiers.GOLD, 6.0F, -3.1F, new Item.Properties().durability(48)));
     public static final DeferredItem<Item> DIAMOND_PAXEL = ITEMS.register("diamond_paxel",
             () -> new PaxelItem(Tiers.DIAMOND, 5.0F, -3.1F, new Item.Properties().durability(2341)));
     public static final DeferredItem<Item> NETHERITE_PAXEL = ITEMS.register("netherite_paxel",
