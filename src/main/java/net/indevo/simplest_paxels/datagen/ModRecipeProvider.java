@@ -2,26 +2,28 @@ package net.indevo.simplest_paxels.datagen;
 
 import net.indevo.simplest_paxels.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
+
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
-    public ModRecipeProvider(PackOutput pOutput) {
-        super(pOutput);
+    public ModRecipeProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+        super(packOutput, lookupProvider);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> p_251297_) {
-
+    protected void buildRecipes(@NotNull RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IRON_PAXEL.get())
                 .pattern("ABD")
                 .pattern(" C ")
@@ -38,7 +40,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.IRON_PICKAXE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(p_251297_);
+                .save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WOODEN_PAXEL.get())
                 .pattern("ABD")
@@ -56,7 +58,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.WOODEN_PICKAXE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(p_251297_);
+                .save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STONE_PAXEL.get())
                 .pattern("ABD")
@@ -74,7 +76,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.STONE_PICKAXE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(p_251297_);
+                .save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GOLDEN_PAXEL.get())
                 .pattern("ABD")
@@ -92,7 +94,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.GOLDEN_PICKAXE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(p_251297_);
+                .save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DIAMOND_PAXEL.get())
                 .pattern("ABD")
@@ -110,8 +112,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(Items.DIAMOND_PICKAXE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(p_251297_);
+                .save(output);
 
-        netheriteSmithing(p_251297_, ModItems.DIAMOND_PAXEL.get(), RecipeCategory.MISC, ModItems.NETHERITE_PAXEL.get());
+        netheriteSmithing(output, ModItems.DIAMOND_PAXEL.get(), RecipeCategory.MISC, ModItems.NETHERITE_PAXEL.get());
     }
 }

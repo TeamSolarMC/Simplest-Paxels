@@ -3,19 +3,16 @@ package net.indevo.simplest_paxels.datagen;
 import net.indevo.simplest_paxels.SimplestPaxels;
 import net.indevo.simplest_paxels.item.ModItems;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, SimplestPaxels.MOD_ID, existingFileHelper);
+        super(output, SimplestPaxels.MODID, existingFileHelper);
     }
 
     @Override
@@ -28,9 +25,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.NETHERITE_PAXEL);
     }
 
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+    private <T extends Item> ItemModelBuilder handheldItem(DeferredItem<T> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(SimplestPaxels.MOD_ID, "item/" + item.getId().getPath()));
+                mcLoc("item/handheld")).texture("layer0",
+                modLoc("item/" + item.getId().getPath()));
     }
 }

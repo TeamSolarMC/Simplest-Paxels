@@ -3,32 +3,34 @@ package net.indevo.simplest_paxels;
 import com.mojang.logging.LogUtils;
 import net.indevo.simplest_paxels.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
-@Mod(SimplestPaxels.MOD_ID)
+@Mod(SimplestPaxels.MODID)
 public class SimplestPaxels
 {
-    public static final String MOD_ID = "simplest_paxels";
+    public static final String MODID = "simplest_paxels";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public SimplestPaxels() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public SimplestPaxels(IEventBus modEventBus, ModContainer modContainer) {
 
         ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
+
         modEventBus.addListener(this::addCreative);
     }
 
@@ -60,7 +62,7 @@ public class SimplestPaxels
 
     }
 
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
