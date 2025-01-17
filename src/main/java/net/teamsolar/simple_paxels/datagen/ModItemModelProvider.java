@@ -1,7 +1,7 @@
-package net.indevo.simplest_paxels.datagen;
+package net.teamsolar.simple_paxels.datagen;
 
-import net.indevo.simplest_paxels.SimplestPaxels;
-import net.indevo.simplest_paxels.item.ModItems;
+import net.teamsolar.simple_paxels.SimplestPaxels;
+import net.teamsolar.simple_paxels.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;

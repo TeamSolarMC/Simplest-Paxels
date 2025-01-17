@@ -1,6 +1,6 @@
-package net.indevo.simplest_paxels.util;
+package net.teamsolar.simple_paxels.util;
 
-import net.indevo.simplest_paxels.SimplestPaxels;
+import net.teamsolar.simple_paxels.SimplestPaxels;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

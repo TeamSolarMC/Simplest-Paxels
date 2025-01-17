@@ -1,6 +1,6 @@
-package net.indevo.simplest_paxels.datagen;
+package net.teamsolar.simple_paxels.datagen;
 
-import net.indevo.simplest_paxels.SimplestPaxels;
+import net.teamsolar.simple_paxels.SimplestPaxels;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

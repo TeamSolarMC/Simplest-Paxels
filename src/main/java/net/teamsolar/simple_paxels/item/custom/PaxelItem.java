@@ -1,6 +1,6 @@
-package net.indevo.simplest_paxels.item.custom;
+package net.teamsolar.simple_paxels.item.custom;
 
-import net.indevo.simplest_paxels.util.ModTags;
+import net.teamsolar.simple_paxels.util.ModTags;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.Tier;
 

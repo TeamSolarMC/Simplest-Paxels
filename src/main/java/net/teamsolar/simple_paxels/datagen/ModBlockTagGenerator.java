@@ -1,13 +1,12 @@
-package net.indevo.simplest_paxels.datagen;
+package net.teamsolar.simple_paxels.datagen;
 
-import net.indevo.simplest_paxels.SimplestPaxels;
-import net.indevo.simplest_paxels.util.ModTags;
+import net.teamsolar.simple_paxels.SimplestPaxels;
+import net.teamsolar.simple_paxels.util.ModTags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.ParametersAreNonnullByDefault;

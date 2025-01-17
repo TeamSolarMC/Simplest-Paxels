@@ -1,6 +1,6 @@
-package net.indevo.simplest_paxels.datagen;
+package net.teamsolar.simple_paxels.datagen;
 
-import net.indevo.simplest_paxels.item.ModItems;
+import net.teamsolar.simple_paxels.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -10,7 +10,6 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;

@@ -1,7 +1,7 @@
-package net.indevo.simplest_paxels.item;
+package net.teamsolar.simple_paxels.item;
 
-import net.indevo.simplest_paxels.SimplestPaxels;
-import net.indevo.simplest_paxels.item.custom.PaxelItem;
+import net.teamsolar.simple_paxels.SimplestPaxels;
+import net.teamsolar.simple_paxels.item.custom.PaxelItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;

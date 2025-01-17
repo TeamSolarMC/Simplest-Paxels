@@ -1,7 +1,7 @@
-package net.indevo.simplest_paxels;
+package net.teamsolar.simple_paxels;
 
 import com.mojang.logging.LogUtils;
-import net.indevo.simplest_paxels.item.ModItems;
+import net.teamsolar.simple_paxels.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
