@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "A": {
-      "item": "minecraft:stone_axe"
+      "item": "minecraft:diamond_axe"
     },
     "B": {
-      "item": "minecraft:stone_shovel"
+      "item": "minecraft:diamond_shovel"
     },
     "C": {
       "item": "minecraft:stick"
     },
     "D": {
-      "item": "minecraft:stone_pickaxe"
+      "item": "minecraft:diamond_pickaxe"
     }
   },
   "pattern": [
@@ -21,7 +21,7 @@
     " C "
   ],
   "result": {
-    "item": "simplest_paxels:stone_paxel"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "simplest_paxels:diamond_paxel"
+  }
 }

@@ -1,2 +1,5 @@
-// 1.20.1	2024-05-17T20:36:02.7695676	Item Tags
-9fa9163144f1eab2b11d1c74e2505f0cde966c47 data/forge/tags/items/paxels.json
+// 1.21.1	2025-01-17T08:21:16.1831712	Item Tags
+9fa9163144f1eab2b11d1c74e2505f0cde966c47 data/forge/tags/item/paxels.json
+880d63311f2739e7bf11d631a3327d6f5203563e data/minecraft/tags/item/enchantable/durability.json
+880d63311f2739e7bf11d631a3327d6f5203563e data/minecraft/tags/item/enchantable/mining.json
+880d63311f2739e7bf11d631a3327d6f5203563e data/minecraft/tags/item/enchantable/mining_loot.json

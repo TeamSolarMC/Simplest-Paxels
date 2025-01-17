@@ -1,49 +1,41 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond_axe": {
+    "has_minecraft:netherite_axe": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:diamond_axe"
-            ]
+            "items": "minecraft:netherite_axe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_diamond_pickaxe": {
+    "has_minecraft:netherite_pickaxe": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:diamond_pickaxe"
-            ]
+            "items": "minecraft:netherite_pickaxe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_diamond_shovel": {
+    "has_minecraft:netherite_shovel": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:diamond_shovel"
-            ]
+            "items": "minecraft:netherite_shovel"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
+    "has_minecraft:stick": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stick"
-            ]
+            "items": "minecraft:stick"
           }
         ]
       },
@@ -51,24 +43,23 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "simplest_paxels:diamond_paxel"
+        "recipe": "simplest_paxels:netherite_paxel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_diamond_axe",
-      "has_diamond_shovel",
-      "has_diamond_pickaxe",
-      "has_stick",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_minecraft:netherite_axe",
+      "has_minecraft:netherite_shovel",
+      "has_minecraft:netherite_pickaxe",
+      "has_minecraft:stick"
     ]
   ],
   "rewards": {
     "recipes": [
-      "simplest_paxels:diamond_paxel"
+      "simplest_paxels:netherite_paxel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

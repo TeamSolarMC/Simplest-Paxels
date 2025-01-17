@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "A": {
       "item": "minecraft:wooden_axe"
@@ -21,7 +21,7 @@
     " C "
   ],
   "result": {
-    "item": "simplest_paxels:wooden_paxel"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "simplest_paxels:wooden_paxel"
+  }
 }

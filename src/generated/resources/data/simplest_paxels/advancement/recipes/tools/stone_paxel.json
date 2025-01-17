@@ -1,49 +1,41 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_axe": {
+    "has_minecraft:stick": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_axe"
-            ]
+            "items": "minecraft:stick"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_iron_pickaxe": {
+    "has_minecraft:stone_axe": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_pickaxe"
-            ]
+            "items": "minecraft:stone_axe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_iron_shovel": {
+    "has_minecraft:stone_pickaxe": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_shovel"
-            ]
+            "items": "minecraft:stone_pickaxe"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stick": {
+    "has_minecraft:stone_shovel": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stick"
-            ]
+            "items": "minecraft:stone_shovel"
           }
         ]
       },
@@ -51,24 +43,23 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "simplest_paxels:iron_paxel"
+        "recipe": "simplest_paxels:stone_paxel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_iron_axe",
-      "has_iron_shovel",
-      "has_iron_pickaxe",
-      "has_stick",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_minecraft:stone_axe",
+      "has_minecraft:stone_shovel",
+      "has_minecraft:stone_pickaxe",
+      "has_minecraft:stick"
     ]
   ],
   "rewards": {
     "recipes": [
-      "simplest_paxels:iron_paxel"
+      "simplest_paxels:stone_paxel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

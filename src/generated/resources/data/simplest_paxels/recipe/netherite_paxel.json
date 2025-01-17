@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "A": {
-      "item": "minecraft:diamond_axe"
+      "item": "minecraft:netherite_axe"
     },
     "B": {
-      "item": "minecraft:diamond_shovel"
+      "item": "minecraft:netherite_shovel"
     },
     "C": {
       "item": "minecraft:stick"
     },
     "D": {
-      "item": "minecraft:diamond_pickaxe"
+      "item": "minecraft:netherite_pickaxe"
     }
   },
   "pattern": [
@@ -21,7 +21,7 @@
     " C "
   ],
   "result": {
-    "item": "simplest_paxels:diamond_paxel"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "simplest_paxels:netherite_paxel"
+  }
 }
