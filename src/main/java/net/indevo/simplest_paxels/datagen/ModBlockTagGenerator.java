@@ -27,5 +27,4 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
     }
-    // TODO
 }
