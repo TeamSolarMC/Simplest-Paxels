@@ -2,16 +2,15 @@ package net.teamsolar.simple_paxels.datagen;
 
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.teamsolar.simple_paxels.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
@@ -28,19 +27,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput output) {
-        PaxelRecipeHelper(Items.WOODEN_AXE, Items.WOODEN_SHOVEL, Items.WOODEN_PICKAXE, ModItems.WOODEN_PAXEL.get())
+        paxelRecipeHelper(Items.WOODEN_AXE, Items.WOODEN_SHOVEL, Items.WOODEN_PICKAXE, ModItems.WOODEN_PAXEL.get())
                 .save(output);
-        PaxelRecipeHelper(Items.STONE_AXE, Items.STONE_SHOVEL, Items.STONE_PICKAXE, ModItems.STONE_PAXEL.get())
+        paxelRecipeHelper(Items.STONE_AXE, Items.STONE_SHOVEL, Items.STONE_PICKAXE, ModItems.STONE_PAXEL.get())
                 .save(output);
-        PaxelRecipeHelper(Items.IRON_AXE, Items.IRON_SHOVEL, Items.IRON_PICKAXE, ModItems.IRON_PAXEL.get())
+        paxelRecipeHelper(Items.IRON_AXE, Items.IRON_SHOVEL, Items.IRON_PICKAXE, ModItems.IRON_PAXEL.get())
                 .save(output);
-        PaxelRecipeHelper(Items.GOLDEN_AXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_PICKAXE, ModItems.GOLDEN_PAXEL.get())
+        paxelRecipeHelper(Items.GOLDEN_AXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_PICKAXE, ModItems.GOLDEN_PAXEL.get())
                 .save(output);
-        PaxelRecipeHelper(Items.DIAMOND_AXE, Items.DIAMOND_SHOVEL, Items.DIAMOND_PICKAXE, ModItems.DIAMOND_PAXEL.get())
+        paxelRecipeHelper(Items.DIAMOND_AXE, Items.DIAMOND_SHOVEL, Items.DIAMOND_PICKAXE, ModItems.DIAMOND_PAXEL.get())
                 .save(output);
-        PaxelRecipeHelper(Items.NETHERITE_AXE, Items.NETHERITE_SHOVEL, Items.NETHERITE_PICKAXE, ModItems.NETHERITE_PAXEL.get())
+        paxelRecipeHelper(Items.NETHERITE_AXE, Items.NETHERITE_SHOVEL, Items.NETHERITE_PICKAXE, ModItems.NETHERITE_PAXEL.get())
                 .save(output);
 
+        basicBlastingAndSmeltingRecipe(ModItems.IRON_PAXEL.get(), Items.IRON_NUGGET, output);
+        basicBlastingAndSmeltingRecipe(ModItems.GOLDEN_PAXEL.get(), Items.GOLD_NUGGET, output);
     }
 
     private String stripNamespace(String itemString) {
@@ -56,10 +57,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .of(item).build());
     }
     private String hasInInventoryCriterionName(ItemLike item) {
-        return "has_".concat(item.asItem().toString());
+        String itemName = item.asItem().toString();
+        return "has_".concat(stripNamespace(itemName));
     }
 
-    private ShapedRecipeBuilder PaxelRecipeHelper(Item axe, Item shovel, Item pickaxe, Item output) {
+    private ShapedRecipeBuilder paxelRecipeHelper(Item axe, Item shovel, Item pickaxe, Item output) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, output)
                 .pattern("ABD")
                 .pattern(" C ")
@@ -72,5 +74,26 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(hasInInventoryCriterionName(shovel), hasInInventory(shovel))
                 .unlockedBy(hasInInventoryCriterionName(pickaxe), hasInInventory(pickaxe))
                 .unlockedBy(hasInInventoryCriterionName(Items.STICK), hasInInventory(Items.STICK));
+    }
+    private void basicBlastingAndSmeltingRecipe(Item input, Item outputItem, RecipeOutput output) {
+        var unqualifiedItemName = stripNamespace(input.toString());
+        SimpleCookingRecipeBuilder.blasting(
+                        Ingredient.of(input),
+                        RecipeCategory.MISC,
+                        outputItem,
+                        0.1F,
+                        100
+                )
+                .unlockedBy(hasInInventoryCriterionName(input), hasInInventory(input))
+                .save(output, ResourceLocation.withDefaultNamespace(unqualifiedItemName.concat("_blasting")));
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(input),
+                        RecipeCategory.MISC,
+                        outputItem,
+                        0.1F,
+                        200
+                )
+                .unlockedBy(hasInInventoryCriterionName(input), hasInInventory(input))
+                .save(output, ResourceLocation.withDefaultNamespace(unqualifiedItemName.concat("_smelting")));
     }
 }

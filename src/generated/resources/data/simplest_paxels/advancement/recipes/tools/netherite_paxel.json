@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_minecraft:netherite_axe": {
+    "has_netherite_axe": {
       "conditions": {
         "items": [
           {
@@ -11,7 +11,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_minecraft:netherite_pickaxe": {
+    "has_netherite_pickaxe": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_minecraft:netherite_shovel": {
+    "has_netherite_shovel": {
       "conditions": {
         "items": [
           {
@@ -31,7 +31,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_minecraft:stick": {
+    "has_stick": {
       "conditions": {
         "items": [
           {
@@ -51,10 +51,10 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_minecraft:netherite_axe",
-      "has_minecraft:netherite_shovel",
-      "has_minecraft:netherite_pickaxe",
-      "has_minecraft:stick"
+      "has_netherite_axe",
+      "has_netherite_shovel",
+      "has_netherite_pickaxe",
+      "has_stick"
     ]
   ],
   "rewards": {

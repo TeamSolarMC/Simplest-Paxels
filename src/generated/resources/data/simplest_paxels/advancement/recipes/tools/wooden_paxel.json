@@ -1,41 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_minecraft:stick": {
+    "has_stick": {
       "conditions": {
         "items": [
           {
             "items": "minecraft:stick"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_minecraft:wooden_axe": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:wooden_axe"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_minecraft:wooden_pickaxe": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:wooden_pickaxe"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_minecraft:wooden_shovel": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:wooden_shovel"
           }
         ]
       },
@@ -46,15 +16,45 @@
         "recipe": "simplest_paxels:wooden_paxel"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wooden_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wooden_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_wooden_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wooden_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_wooden_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:wooden_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_minecraft:wooden_axe",
-      "has_minecraft:wooden_shovel",
-      "has_minecraft:wooden_pickaxe",
-      "has_minecraft:stick"
+      "has_wooden_axe",
+      "has_wooden_shovel",
+      "has_wooden_pickaxe",
+      "has_stick"
     ]
   ],
   "rewards": {

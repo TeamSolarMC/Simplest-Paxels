@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_minecraft:diamond_axe": {
+    "has_diamond_axe": {
       "conditions": {
         "items": [
           {
@@ -11,7 +11,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_minecraft:diamond_pickaxe": {
+    "has_diamond_pickaxe": {
       "conditions": {
         "items": [
           {
@@ -21,7 +21,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_minecraft:diamond_shovel": {
+    "has_diamond_shovel": {
       "conditions": {
         "items": [
           {
@@ -31,7 +31,7 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_minecraft:stick": {
+    "has_stick": {
       "conditions": {
         "items": [
           {
@@ -51,10 +51,10 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_minecraft:diamond_axe",
-      "has_minecraft:diamond_shovel",
-      "has_minecraft:diamond_pickaxe",
-      "has_minecraft:stick"
+      "has_diamond_axe",
+      "has_diamond_shovel",
+      "has_diamond_pickaxe",
+      "has_stick"
     ]
   ],
   "rewards": {
