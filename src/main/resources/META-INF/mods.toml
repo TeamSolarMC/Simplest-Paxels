@@ -7,13 +7,16 @@ license="MIT"
 
 modId="simplest_paxels"
 
-version="1.0.4"
+version="1.0.5"
 
 displayName="Simplest Paxels"
 
-authors="IndEvo Studio"
+authors="Team Solar"
 
 description='''Vanilla paxels: pickaxe + axe + shovel in one.'''
+
+logoFile = "icon.png"
+
 
 [[dependencies.simplest_paxels]]
 modId="forge"
