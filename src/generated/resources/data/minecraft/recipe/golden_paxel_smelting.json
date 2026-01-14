@@ -3,9 +3,7 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "simplest_paxels:golden_paxel"
-  },
+  "ingredient": "simplest_paxels:golden_paxel",
   "result": {
     "count": 1,
     "id": "minecraft:gold_nugget"

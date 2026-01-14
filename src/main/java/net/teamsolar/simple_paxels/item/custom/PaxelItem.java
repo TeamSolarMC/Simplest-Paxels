@@ -7,9 +7,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -17,28 +18,32 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
 import net.teamsolar.simple_paxels.util.ModTags;
-import net.minecraft.world.item.Tier;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
 
-public class PaxelItem extends DiggerItemWithoutDurability {
-    public PaxelItem(Tier tier, float attackDamageModifier, float attackSpeedModifier, Properties properties) {
-        super(
-                tier,
-                ModTags.Blocks.PAXEL_MINEABLE,
-                properties.attributes(
-                        PaxelItem.createAttributes(tier, attackDamageModifier, attackSpeedModifier)
-                )
-        );
+public class PaxelItem extends Item {
+    public PaxelItem(Properties properties) {
+        super(properties);
     }
+
+    public static Item.Properties paxelProperties(ToolMaterial material, Item.Properties properties, float attackDamage, float attackSpeed, int durability) {
+        // Note that attackDamage is modified by the tool material's damage
+        // (i.e. attackDamage will be attackDamage + material.attackDamageBonus, attackSpeed will just be attackSpeed)
+        // Durability is set by the code
+        return properties
+            .tool(material, ModTags.Blocks.PAXEL_MINEABLE, attackDamage, attackSpeed, 0.0F)
+            .durability(durability);
+    }
+
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
         BlockPos blockpos = context.getClickedPos();
         BlockState blockstate = level.getBlockState(blockpos);
         Player player = context.getPlayer();
+
         // First attempt axe actions
         Optional<BlockState> optional = this.evaluateNewBlockStateAsAxe(level, blockpos, player, level.getBlockState(blockpos), context);
         if (optional.isPresent()) {
@@ -50,10 +55,11 @@ public class PaxelItem extends DiggerItemWithoutDurability {
             level.setBlock(blockpos, optional.get(), 11);
             level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, optional.get()));
             if (player != null) {
-                itemstack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(context.getHand()));
+                itemstack.hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
+
         // Then attempt shovel actions
         if (context.getClickedFace() == Direction.DOWN) {
             return InteractionResult.PASS;
@@ -73,15 +79,15 @@ public class PaxelItem extends DiggerItemWithoutDurability {
                 }
             }
             if (finalBlockState != null) {
-                if (!level.isClientSide) {
+                if (!level.isClientSide()) {
                     level.setBlock(blockpos, finalBlockState, 11);
                     level.gameEvent(GameEvent.BLOCK_CHANGE, blockpos, GameEvent.Context.of(player, finalBlockState));
                     if (player != null) {
-                        context.getItemInHand().hurtAndBreak(1, player, LivingEntity.getSlotForHand(context.getHand()));
+                        context.getItemInHand().hurtAndBreak(1, player, context.getHand().asEquipmentSlot());
                     }
                 }
 
-                return InteractionResult.sidedSuccess(level.isClientSide);
+                return InteractionResult.SUCCESS;
             } else {
                 return InteractionResult.PASS;
             }
@@ -113,7 +119,7 @@ public class PaxelItem extends DiggerItemWithoutDurability {
     }
 
     @Override
-    public boolean canPerformAction(ItemStack stack, ItemAbility itemAbility) {
+    public boolean canPerformAction(@NotNull ItemStack stack, @NotNull ItemAbility itemAbility) {
         return ItemAbilities.DEFAULT_AXE_ACTIONS.contains(itemAbility) || ItemAbilities.DEFAULT_SHOVEL_ACTIONS.contains(itemAbility);
     }
 }

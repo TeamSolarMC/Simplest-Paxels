@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "minecraft:iron_axe"
-    },
-    "B": {
-      "item": "minecraft:iron_shovel"
-    },
-    "C": {
-      "item": "minecraft:stick"
-    },
-    "D": {
-      "item": "minecraft:iron_pickaxe"
-    }
+    "A": "minecraft:iron_axe",
+    "B": "minecraft:iron_shovel",
+    "C": "minecraft:stick",
+    "D": "minecraft:iron_pickaxe"
   },
   "pattern": [
     "ABD",

@@ -13,9 +13,8 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagGenerator extends BlockTagsProvider {
-    public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
-                                @Nullable net.neoforged.neoforge.common.data.ExistingFileHelper existingFileHelper ){
-        super(output, lookupProvider, SimplestPaxels.MODID, existingFileHelper);
+    public ModBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider ){
+        super(output, lookupProvider, SimplestPaxels.MODID);
     }
 
     @Override

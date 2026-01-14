@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "minecraft:diamond_axe"
-    },
-    "B": {
-      "item": "minecraft:diamond_shovel"
-    },
-    "C": {
-      "item": "minecraft:stick"
-    },
-    "D": {
-      "item": "minecraft:diamond_pickaxe"
-    }
+    "A": "minecraft:diamond_axe",
+    "B": "minecraft:diamond_shovel",
+    "C": "minecraft:stick",
+    "D": "minecraft:diamond_pickaxe"
   },
   "pattern": [
     "ABD",
