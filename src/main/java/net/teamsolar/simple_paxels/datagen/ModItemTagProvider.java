@@ -24,6 +24,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(
                         ModItems.WOODEN_PAXEL.get(),
                         ModItems.STONE_PAXEL.get(),
+                        ModItems.COPPER_PAXEL.get(),
                         ModItems.GOLDEN_PAXEL.get(),
                         ModItems.IRON_PAXEL.get(),
                         ModItems.DIAMOND_PAXEL.get(),

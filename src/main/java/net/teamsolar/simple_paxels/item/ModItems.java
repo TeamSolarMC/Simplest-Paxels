@@ -18,7 +18,7 @@ public class ModItems {
             () -> PaxelItem.paxelProperties(
                     ToolMaterial.WOOD,
                     new Item.Properties(),
-                    6.0F,
+                    5.0F,
                     -3.3F,
                     88
 
@@ -30,10 +30,21 @@ public class ModItems {
             () -> PaxelItem.paxelProperties(
                     ToolMaterial.STONE,
                     new Item.Properties(),
-                    7.0F,
+                    6.0F,
                     -3.3F,
                     196
 
+            )
+    );
+    public static final DeferredItem<Item> COPPER_PAXEL = ITEMS.registerItem(
+            "copper_paxel",
+            PaxelItem::new,
+            () -> PaxelItem.paxelProperties(
+                    ToolMaterial.COPPER,
+                    new Item.Properties(),
+                    6.0F,
+                    0.7F - 4.0F,
+                    285
             )
     );
     public static final DeferredItem<Item> IRON_PAXEL = ITEMS.registerItem(
@@ -42,7 +53,7 @@ public class ModItems {
             () -> PaxelItem.paxelProperties(
                     ToolMaterial.IRON,
                     new Item.Properties(),
-                    6.0F,
+                    5.0F,
                     -3.2F,
                     375
 
@@ -54,7 +65,7 @@ public class ModItems {
             () -> PaxelItem.paxelProperties(
                     ToolMaterial.GOLD,
                     new Item.Properties(),
-                    6.0F,
+                    5.0F,
                     -3.1F,
                     48
 
@@ -66,7 +77,7 @@ public class ModItems {
             () -> PaxelItem.paxelProperties(
                     ToolMaterial.DIAMOND,
                     new Item.Properties(),
-                    5.0F,
+                    4.0F,
                     -3.1F,
                     2341
 
@@ -78,7 +89,7 @@ public class ModItems {
             () -> PaxelItem.paxelProperties(
                     ToolMaterial.NETHERITE,
                     new Item.Properties().fireResistant(),
-                    5.0F,
+                    4.0F,
                     -3.1F,
                     3046
 

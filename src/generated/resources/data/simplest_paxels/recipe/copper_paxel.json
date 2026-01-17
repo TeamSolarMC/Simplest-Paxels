@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "minecraft:copper_axe",
+    "B": "minecraft:copper_shovel",
+    "C": "minecraft:stick",
+    "D": "minecraft:copper_pickaxe"
+  },
+  "pattern": [
+    "ABD",
+    " C ",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simplest_paxels:copper_paxel"
+  }
+}

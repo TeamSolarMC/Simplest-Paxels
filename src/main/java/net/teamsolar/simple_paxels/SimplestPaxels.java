@@ -42,6 +42,7 @@ public class SimplestPaxels
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.WOODEN_PAXEL);
             event.accept(ModItems.STONE_PAXEL);
+            event.accept(ModItems.COPPER_PAXEL);
             event.accept(ModItems.IRON_PAXEL);
             event.accept(ModItems.GOLDEN_PAXEL);
             event.accept(ModItems.DIAMOND_PAXEL);
@@ -50,6 +51,7 @@ public class SimplestPaxels
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.WOODEN_PAXEL);
             event.accept(ModItems.STONE_PAXEL);
+            event.accept(ModItems.COPPER_PAXEL);
             event.accept(ModItems.IRON_PAXEL);
             event.accept(ModItems.GOLDEN_PAXEL);
             event.accept(ModItems.DIAMOND_PAXEL);

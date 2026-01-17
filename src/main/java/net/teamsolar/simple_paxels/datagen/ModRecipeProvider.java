@@ -29,12 +29,14 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes() {
         paxelRecipe(Items.WOODEN_AXE, Items.WOODEN_SHOVEL, Items.WOODEN_PICKAXE, ModItems.WOODEN_PAXEL.get());
         paxelRecipe(Items.STONE_AXE, Items.STONE_SHOVEL, Items.STONE_PICKAXE, ModItems.STONE_PAXEL.get());
+        paxelRecipe(Items.COPPER_AXE, Items.COPPER_SHOVEL, Items.COPPER_PICKAXE, ModItems.COPPER_PAXEL.get());
         paxelRecipe(Items.IRON_AXE, Items.IRON_SHOVEL, Items.IRON_PICKAXE, ModItems.IRON_PAXEL.get());
         paxelRecipe(Items.GOLDEN_AXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_PICKAXE, ModItems.GOLDEN_PAXEL.get());
         paxelRecipe(Items.DIAMOND_AXE, Items.DIAMOND_SHOVEL, Items.DIAMOND_PICKAXE, ModItems.DIAMOND_PAXEL.get());
         paxelRecipe(Items.NETHERITE_AXE, Items.NETHERITE_SHOVEL, Items.NETHERITE_PICKAXE, ModItems.NETHERITE_PAXEL.get());
 
         basicBlastingAndSmeltingRecipe(ModItems.IRON_PAXEL.get(), Items.IRON_NUGGET);
+        basicBlastingAndSmeltingRecipe(ModItems.COPPER_PAXEL.get(), Items.COPPER_NUGGET);
         basicBlastingAndSmeltingRecipe(ModItems.GOLDEN_PAXEL.get(), Items.GOLD_NUGGET);
     }
 
