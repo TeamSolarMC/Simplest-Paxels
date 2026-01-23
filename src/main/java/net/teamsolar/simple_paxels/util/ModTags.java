@@ -1,7 +1,7 @@
 package net.teamsolar.simple_paxels.util;
 
 import net.teamsolar.simple_paxels.SimplestPaxels;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -20,11 +20,11 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_NETHERITE_TOOL = tag("needs_netherite_tool");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SimplestPaxels.MODID, name));
+            return BlockTags.create(Identifier.fromNamespaceAndPath(SimplestPaxels.MODID, name));
         }
         // ???
         private static TagKey<Block> forgeTag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath("forge", name));
+            return BlockTags.create(Identifier.fromNamespaceAndPath("forge", name));
         }
     }
 
@@ -32,10 +32,10 @@ public class ModTags {
         public static final TagKey<Item> PAXELS = forgeTag("paxels");
 
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SimplestPaxels.MODID, name));
+            return ItemTags.create(Identifier.fromNamespaceAndPath(SimplestPaxels.MODID, name));
         }
         private static TagKey<Item> forgeTag(String name) {
-            return ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", name));
+            return ItemTags.create(Identifier.fromNamespaceAndPath("forge", name));
         }
     }
 }
