@@ -4,6 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.teamsolar.simple_paxels.item.ModItems;
@@ -46,8 +47,7 @@ public class ModRecipeProvider extends RecipeProvider {
     }
 
     private void paxelRecipe(Item axe, Item shovel, Item pickaxe, Item outputItem) {
-        ShapedRecipeBuilder.shaped(
-            this.registries.lookupOrThrow(Registries.ITEM),
+        shaped(
             RecipeCategory.TOOLS,
             outputItem
         ).pattern("ABD")
@@ -67,6 +67,7 @@ public class ModRecipeProvider extends RecipeProvider {
         SimpleCookingRecipeBuilder.blasting(
                         Ingredient.of(input),
                         RecipeCategory.MISC,
+                        CookingBookCategory.MISC,
                         outputItem,
                         0.1F,
                         100
@@ -76,6 +77,7 @@ public class ModRecipeProvider extends RecipeProvider {
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(input),
                         RecipeCategory.MISC,
+                        CookingBookCategory.MISC,
                         outputItem,
                         0.1F,
                         200

@@ -5,7 +5,6 @@
   "experience": 0.1,
   "ingredient": "simplest_paxels:iron_paxel",
   "result": {
-    "count": 1,
     "id": "minecraft:iron_nugget"
   }
 }
