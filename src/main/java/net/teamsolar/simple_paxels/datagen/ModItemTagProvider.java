@@ -1,5 +1,7 @@
 package net.teamsolar.simple_paxels.datagen;
 
+import net.minecraft.data.tags.TagAppender;
+import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 import net.teamsolar.simple_paxels.SimplestPaxels;
 import net.teamsolar.simple_paxels.item.ModItems;
@@ -10,6 +12,7 @@ import net.minecraft.tags.ItemTags;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends ItemTagsProvider {
@@ -20,16 +23,19 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     @ParametersAreNonnullByDefault
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(ModTags.Items.PAXELS)
-                .add(
-                        ModItems.WOODEN_PAXEL.get(),
-                        ModItems.STONE_PAXEL.get(),
-                        ModItems.COPPER_PAXEL.get(),
-                        ModItems.GOLDEN_PAXEL.get(),
-                        ModItems.IRON_PAXEL.get(),
-                        ModItems.DIAMOND_PAXEL.get(),
-                        ModItems.NETHERITE_PAXEL.get()
-                );
+        TagAppender<Item> builder = this.tag(ModTags.Items.PAXELS);
+
+        builder.addAll(
+                List.of(
+                        ModItems.WOODEN_PAXEL.getKey(),
+                        ModItems.STONE_PAXEL.getKey(),
+                        ModItems.COPPER_PAXEL.getKey(),
+                        ModItems.GOLDEN_PAXEL.getKey(),
+                        ModItems.IRON_PAXEL.getKey(),
+                        ModItems.DIAMOND_PAXEL.getKey(),
+                        ModItems.NETHERITE_PAXEL.getKey()
+                )
+        );
         this.tag(ItemTags.DURABILITY_ENCHANTABLE).addTag(ModTags.Items.PAXELS);
         this.tag(ItemTags.MINING_ENCHANTABLE).addTag(ModTags.Items.PAXELS);
         this.tag(ItemTags.MINING_LOOT_ENCHANTABLE).addTag(ModTags.Items.PAXELS);
